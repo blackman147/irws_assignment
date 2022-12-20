@@ -1,6 +1,4 @@
 import scrapy
-from scrapy import Request
-from scrapy.utils import url
 
 
 def remove_whitespace_and_newlines(string):
@@ -33,8 +31,7 @@ class GriffithSpider(scrapy.Spider):
         if 'depth' in response.meta:
             depth = response.meta['depth']
 
-        # Print what the spider is  doing
-        # print(depth, response.url, '<-', from_url, from_text, sep=' ')
+
         # get all the <a> tags
         if depth < self.maxdepth:
             a_selectors = response.xpath("//a")
@@ -55,5 +52,3 @@ class GriffithSpider(scrapy.Spider):
 
         # increments the number of documents
         self.nbdocs += 1
-
-

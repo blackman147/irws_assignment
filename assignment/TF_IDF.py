@@ -16,7 +16,6 @@ else:
 
 term_dict = {}
 
-
 with open(input_file, 'r') as f:
     for line in f:
 
@@ -92,5 +91,3 @@ with open(output_file, 'w') as f:
         op_string = op_string[:-1]
 
         f.write(op_string + "\n")
-
-

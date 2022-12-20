@@ -1,8 +1,10 @@
 # irws_assignment
+
 Lyne Stella Naluwaga  NO 3090081
+
 Francis Ntoka  NO 3092861
 
-python -m venv irws_env 
+python -m venv irws_env
 .\env\Scripts\activate -> create and run virtual python environment
 
 pip install -r requirements.txt -> install packages
@@ -145,8 +147,8 @@ MILESTONE 6
 -- Operating system : mac os monterey v 12.6
 -- RAM : 8GB
 -- Disk : 250GB
-> 
-> 
+>
+>
 
 
 >o Language and version that it is written in:
