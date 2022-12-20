@@ -25,8 +25,6 @@ for file in files:
 tokens = list(set(tokens))
 
 # for all tokens print the file name and the number of occurrences
-
-
 # getting all files that contains the token, counting the number of occurrences of the token in the file and
 # printing the token and the files that contains it to the output file.
 for token in tokens:
@@ -45,27 +43,3 @@ for token in tokens:
     with open(output_file, 'a') as f:
         f.write(token + "\t" + files_with_token_str + "\n")
 
-
-import re
-
-def clean_text(text):
-  # Remove any HTML tags
-  text = re.sub(r'<[^>]*>', '', text)
-
-  # Remove any non-alphanumeric characters
-  text = re.sub(r'[^\w\s]', '', text)
-
-  # Convert all whitespace to a single space
-  text = re.sub(r'\s+', ' ', text)
-
-  # Remove leading and trailing whitespace
-  text = text.strip()
-
-  return text
-
-# Example usage
-scraped_text = "This is some <b>bold</b> text with special characters like $ and %"
-cleaned_text = clean_text(scraped_text)
-
-print(cleaned_text)
-# Output: "This is some bold text with special characters like and"

@@ -34,8 +34,6 @@ query_tokens = query.split()
 query_tokens = [PorterStemmer().stem(token, i=0, j=len(token) - 1) for token in query_tokens]
 
 # retrieve the  score for every token in every file and  store it in a dictionary
-# key: filename
-# value: score
 score_dict = {}
 
 num_docs = len(files)
@@ -66,8 +64,7 @@ def get_score(file):
 
     # retrieve the tf-idf for every token in the file and query
     # store the tf-idf in a dictionary
-    # key: token
-    # value: tf-idf
+
     tfidf_dict = {}
     for token in tokens:
         # to get the tf-idf for the token in the file and the query
